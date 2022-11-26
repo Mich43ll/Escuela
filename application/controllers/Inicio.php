@@ -19,6 +19,7 @@ class Inicio extends CI_Controller {
       $this->load->view('inicio/inicio');
       $this->load->view('plantilla/footer');
       $this->load->view('plantilla/scripts');
+      $this->load->view('plantilla/end');
     }    
 }
 

@@ -1,1 +1,1 @@
-<?php echo "Pagina de inicio" ?>
+<div><?php echo "Pagina de inicio" ?></div>
