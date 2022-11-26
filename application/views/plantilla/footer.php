@@ -1,31 +1,13 @@
-<footer class="footer-distributed">
-
-			<div class="footer-right">
-
-				<a href="#"><i class="fa fa-facebook"></i></a>
-				<a href="#"><i class="icon ion-social-twitter"></i></a>
-				<a href="#"><i class="fa fa-linkedin"></i></a>
-				<a href="#"><i class="fa fa-github"></i></a>
-
-			</div>
-
-			<div class="footer-left">
-
-				<p class="footer-links">
-					<a class="link-1" href="#">Home</a>
-
-					<a href="#">Blog</a>
-
-					<a href="#">Pricing</a>
-
-					<a href="#">About</a>
-
-					<a href="#">Faq</a>
-
-					<a href="#">Contact</a>
-				</p>
-
-				<p>Company Name &copy; 2015</p>
-			</div>
-
-</footer>
+<div>
+		<footer class="footer-basic">
+            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="#">Services</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">Company Name © 2018</p>
+        </footer>
+</div>

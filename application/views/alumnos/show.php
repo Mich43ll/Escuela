@@ -1,7 +1,7 @@
 <?php
 echo '<h2 class="text-center" style="color:white">';echo $titulo;'</h2>'; ?>
 
-
+<link rel="stylesheet" href="/public/src/css/tablas.css">
 <table class="table">
     <thead>
         <tr>
