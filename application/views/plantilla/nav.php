@@ -8,7 +8,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
           <ul class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="">Inicio</a>
+          <?php echo anchor('/inicio','Inicio','class="nav-link""');?>
         </li>
         
 
