@@ -7,17 +7,18 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
           <ul class="navbar-nav">
-          <?php echo anchor('/inicio','Inicio','class="nav-link""');?>
+          <?php echo anchor('/inicio','Inicio','class="nav-link"');?>
         </li>
         
 
 
-            <li class="nav-item dropdown">
+        <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Alumnos</a>
           <ul class="dropdown-menu dropdown-menu-dark">
-          <li class="dropdown-item">
-                        <?php echo anchor('alumnos/show','Listar Alumnos','class="nav-link"');?>
-          </li>
+            <li>
+              <?php echo anchor('alumnos/show','Listar Alumnos','class="dropdown-item"');?>
+              <?php echo anchor('alumnos/save','Ingresar Alumnos','class="dropdown-item"');?>
+            </li>
           </ul>
         </li>
 

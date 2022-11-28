@@ -6,7 +6,7 @@ class Alumnos_model extends CI_Model {
 	{
 		$this->load->database();
 	}
-	public function listar($filtros = FALSE)
+	public function show($filtros = FALSE)
 	{
 		if($filtros === FALSE){
             $query = $this->db->get('escuela.alumnos');
@@ -14,5 +14,13 @@ class Alumnos_model extends CI_Model {
         }
         $query = $this->db->get_where('alumnos', $filtros);
         return $query->row_array();
+	}
+	public function save(array $datos)
+	{
+		return $this->db->insert("escuela.alumnos", $datos);
+	}
+	public function edit(array $datos)
+	{
+		return $this->db->insert("escuela.alumnos", $datos);
 	}
 }

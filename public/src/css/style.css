@@ -1,14 +1,20 @@
 @import "compass/css3";
 
 * { box-sizing: border-box; }
-
-body {
-	font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
-  color:white;
-  font-size:12px;
-  background:rgb(110, 110, 110) url(/images/classy_fabric.png);
+html{
+  min-height: 100%;
+  position: relative;
 }
-
+body {
+  margin: 0;
+	font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+  font-size:12px;
+  display: grid;
+  margin-bottom: 40px;
+  background: linear-gradient(to right, rgb(185, 231, 229), rgb(141, 161, 218));
+;
+}
+/*Formularios*/
 form {
  	background:#111; 
   width:700px;
@@ -18,6 +24,7 @@ form {
   overflow:hidden;
   position:relative;
   box-shadow: 0 5px 10px 5px rgba(0,0,0,0.2);
+  margin-bottom: 100px;
 }
 
 
@@ -52,7 +59,7 @@ form:before {
 
 form h1 {
   font-size:18px;
-  text-shadow:0 1px 0 black;
+  text-shadow:0 1px 0 rgb(129, 127, 127);
   text-align:center;
   padding:15px 0;
   border-bottom:1px solid rgba(0,0,0,1);
@@ -153,4 +160,122 @@ label:hover ~ input[type=password] {
 
 li{
   text-decoration: none;
+}
+
+
+/*Tabla*/
+td{
+  padding: 15px;
+  border: 1px solid black;
+  
+}
+th{
+  padding: 15px;
+  border: 15px solid black;
+}
+table{
+  margin: 300px auto;
+  margin-bottom: 100px;
+  margin-top: 20px;
+  background-color: #fafdff;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+
+/*footer*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+* {
+  font-family: Roboto;
+}
+
+.footer-distributed {
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  text-align: left;
+  font: normal 16px sans-serif;
+  width: 100%;
+  height: 81px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  
+}
+
+.footer-distributed .footer-left p {
+  color: #8f9296;
+  font-size: 14px;
+  margin: 0;
+}
+/* Footer links */
+
+.footer-distributed p.footer-links {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 10px;
+  padding: 0;
+  transition: ease .25s;
+}
+
+.footer-distributed p.footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+  transition: ease .25s;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "·";
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+.footer-distributed .footer-right {
+  float: right;
+  margin-top: 6px;
+  max-width: 180px;
+}
+
+.footer-distributed .footer-right a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 3px;
+  transition:all .25s;
+}
+
+.footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
+
+.footer-distributed p.footer-links a:hover{text-decoration:underline;}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+  .footer-distributed .footer-left, .footer-distributed .footer-right {
+    text-align: center;
+  }
+  .footer-distributed .footer-right {
+    float: none;
+    margin: 0 auto 20px;
+  }
+  .footer-distributed .footer-left p.footer-links {
+    line-height: 1.8;
+  }
 }
