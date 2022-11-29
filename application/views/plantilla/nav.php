@@ -9,9 +9,8 @@
           <ul class="navbar-nav">
           <?php echo anchor('/inicio','Inicio','class="nav-link"');?>
         </li>
-        
 
-
+        <!--Navegacion de Alumnos Lista-->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Alumnos</a>
           <ul class="dropdown-menu dropdown-menu-dark">
@@ -35,15 +34,13 @@
         </li>
 
             
-
-            <li class="nav-item dropdown">
+        <!--Navegacion de Empleados Lista-->
+        <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Empleados</a>
           <ul class="dropdown-menu dropdown-menu-dark">
-          <li>
-            <a class="dropdown-item" href="">Lista de Empleados</a>
-          </li>
             <li>
-              <a class="dropdown-item" href="">Ingresar Empleados</a>
+              <?php echo anchor('empleados/show','Listar Empleados','class="dropdown-item"');?>
+              <?php echo anchor('empleados/save','Ingresar Empleados','class="dropdown-item"');?>
             </li>
           </ul>
         </li>

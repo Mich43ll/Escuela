@@ -19,8 +19,14 @@ class Alumnos_model extends CI_Model {
 	{
 		return $this->db->insert("escuela.alumnos", $datos);
 	}
-	public function edit(array $datos)
+
+	public function getdata($id)
 	{
-		return $this->db->insert("escuela.alumnos", $datos);
+		return $this->db->query("SELECT idAlumno, NombreCompleto, Direccion, Genero, Edad, Estado, idGrado FROM escuela.alumnos WHERE idAlumno = {$id}")->row();
 	}
+	public function update(int $idAlumno, string $NombreCompleto, string $Direccion, string $Genero, int $Edad, int $Estado, int $idGrado)
+	{
+		return $this->db->query("UPDATE escuela.alumnos SET NombreCompleto = {$NombreCompleto}, Direccion = {$Direccion}, Genero = {$Genero}, Edad = {$Edad}, Estado = {$Estado}, idGrado = {$idGrado} WHERE idAlumno = {$idAlumno}");
+	}
+
 }
