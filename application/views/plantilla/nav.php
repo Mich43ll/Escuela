@@ -58,17 +58,16 @@
         </li>
 
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Control de Notas
-              </a>
-
-              <!---Lista de Notas Menu-->
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="">Notas del Alumno</a></li>
-                <li><a class="dropdown-item" href="">Ingresar Nueva Nota</a></li>
-              </ul>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Control de Notas</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li>
+              <?php echo anchor('notas/show','Listar notas','class="dropdown-item"');?>
+              <?php echo anchor('notas/save','Ingresar nota','class="dropdown-item"');?>
             </li>
+          </ul>
+        </li>
+
           
           
 
