@@ -93,6 +93,13 @@ class Alumnos extends CI_Controller {
         $this->load->view('plantilla/scripts');
         $this->load->view('plantilla/end');
     }
+    public function delete(int $id){
+      $this->load->model('alumnos_model');
+        if($this->alumnos_model->delete($id)){
+          redirect(base_url("alumnos/show"));
+        }
+      
+    }
 }
 
 

@@ -31,7 +31,7 @@
                             <td><?php echo $f['Estado'];?></td>
                             <td><?php echo $f['idGrado'];?></td>
                             <td><a href="<?php echo base_url();?>alumnos/edit/<?php echo $f['idAlumno']; ?>" class="btn btn-primary">Editar</a>
-                                <?php echo anchor('alumnos/delete','Eliminar','class="btn btn-danger"');?>
+                            <a href="<?php echo base_url();?>alumnos/delete/<?php echo $f['idAlumno']; ?>" class="btn btn-danger">Eliminar</a>
                             </td>
                         </tr>  
                         <?php } ?>
