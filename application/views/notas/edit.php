@@ -4,7 +4,7 @@
 
         <p>
             <label >idNotas</label>
-            <input type="text" name="idNotas" readonly  value="<?php echo $nota->idnota;?>" >
+            <input type="text" name="idNotas" disabled  value="<?php echo $nota->idNotas?>" >
         </p>
 
         <p>
@@ -20,10 +20,6 @@
         <p>
             <label for="tercerParcial">tercerParcial</label>
             <input type="text" name="tercerParcial" value="<?php echo $nota->tercerParcial ?>">
-        </p>
-        <p>
-            <label for="Promedio">Promedio</label>
-            <input type="text" name="Promedio" value="<?php echo $nota->Promedio ?>">
         </p>
 
         <p>

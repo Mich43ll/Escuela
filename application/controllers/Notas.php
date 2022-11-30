@@ -60,7 +60,7 @@ class Notas extends CI_Controller {
       $this->load->model('notas_model');
       if(!$id == null){
         $id = $this->db->escape((int)$id);
-        $alumno = $this->notas_model->getdata($id);
+        $nota = $this->notas_model->getdata($id);
         $this->load->view('plantilla/head');
         $this->load->view('plantilla/nav');
         $this->load->view('notas/edit', compact("nota"));
