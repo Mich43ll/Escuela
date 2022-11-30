@@ -37,19 +37,20 @@ class Notas extends CI_Controller {
     public function save(){
       $this->load->model('notas_model');
       if($this->input->post()){
-        $NombreCompleto = $_POST["NombreCompleto"];
-        $Direccion = $_POST["Direccion"];
-        $Genero = $_POST["Genero"];
-        $Edad = $_POST["Edad"];
-        $Estado = $_POST["Estado"];
-        $idGrado = $_POST["idGrado"];
+        $primerParcial = $_POST["primerParcial"];
+        $segundoParcial = $_POST["segundoParcial"];
+        $tercerParcial = $_POST["tercerParcial"];
+        $Promedio = ($primerParcial+$segundoParcial+$tercerParcial)/3;
+        $idClase = $_POST["idClase"];
+        $idAlumno = $_POST["idAlumno"];
+        $idEmpleado = $_POST["idEmpleado"];
         $this->notas_model->save($_POST);
-        redirect(base_url("alumnos/show"));
+        redirect(base_url("notas/show"));
 
       }
         $this->load->view('plantilla/head');
         $this->load->view('plantilla/nav');
-        $this->load->view('alumnos/save');
+        $this->load->view('notas/save');
         $this->load->view('plantilla/footer');
         $this->load->view('plantilla/scripts');
         $this->load->view('plantilla/end');
@@ -62,33 +63,34 @@ class Notas extends CI_Controller {
         $alumno = $this->notas_model->getdata($id);
         $this->load->view('plantilla/head');
         $this->load->view('plantilla/nav');
-        $this->load->view('alumnos/edit', compact("alumno"));
+        $this->load->view('notas/edit', compact("nota"));
         $this->load->view('plantilla/footer');
         $this->load->view('plantilla/scripts');
         $this->load->view('plantilla/end');
       }
       else{
-        redirect(base_url("alumnos/show"));
+        redirect(base_url("notas/show"));
       }
     }
     public function update(){
       $this->load->model('notas_model');
       if($this->input->post()){
+        $idNotas=$this->db->escape((int)$_POST["idNotas"]);
+        $primerParcial=$this->db->escape((int)$_POST["primerParcial"]);
+        $segundoParcial=$this->db->escape((int)$_POST["segundoParcial"]);
+        $tercerParcial=$this->db->escape((int)$_POST["segundoParcial"]);
+        $Promedio=$this->db->escape((int)($primerParcial+$segundoParcial+$tercerParcial)/3);
+        $idClase=$this->db->escape((int)$_POST["idClase"]);
         $idAlumno=$this->db->escape((int)$_POST["idAlumno"]);
-        $NombreCompleto=$this->db->escape($_POST["NombreCompleto"]);
-        $Direccion=$this->db->escape($_POST["Direccion"]);
-        $Genero=$this->db->escape($_POST["Genero"]);
-        $Edad=$this->db->escape((int)$_POST["Edad"]);
-        $Estado=$this->db->escape((int)$_POST["Estado"]);
-        $idGrado=$this->db->escape((int)$_POST["idGrado"]);
-        if($this->notas_model->update($idAlumno, $NombreCompleto, $Direccion, $Genero, $Edad, $Estado, $idGrado)){
-          redirect(base_url("alumnos/show"));
+        $idEmpleado=$this->db->escape((int)$_POST["idEmpleado"]);
+        if($this->notas_model->update($idNotas, $primerParcial, $segundoParcial, $tercerParcial, $Promedio, $idClase,$idAlumno, $idEmpleado)){
+          redirect(base_url("notas/show"));
         }
 
       }
         $this->load->view('plantilla/head');
         $this->load->view('plantilla/nav');
-        $this->load->view('alumnos/update');
+        $this->load->view('notas/update');
         $this->load->view('plantilla/footer');
         $this->load->view('plantilla/scripts');
         $this->load->view('plantilla/end');

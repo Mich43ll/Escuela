@@ -1,34 +1,33 @@
-<h1 style= text-align:center>Ingresar Alumnos</h1>
-<form action="<?php anchor("alumnos/save") ?>"  method ="POST" autocomplete="off">
+<h1 style= text-align:center>Ingresar notas</h1>
+<form action="<?php anchor("notas/save") ?>"  method ="POST" autocomplete="off">
   <div class="inset">
 
   <p>
-    <label for="text">NombreCompleto</label>
-    <input type="text" name="NombreCompleto" >
+    <label for="text">Primer Parcial</label>
+    <input type="text" name="primerParcial" >
   </p>
 
   <p>
-    <label for="text">Direccion</label>
-    <input type="text" name="Direccion">
+    <label for="text">Segundo Parcial</label>
+    <input type="text" name="segundoParcial">
   </p>
 
   <p>
-    <label for="text">Genero</label>
-    <input type="text" name="Genero" >
-  </p>
-
-  <p>
-    <label for="text">Edad</label>
-    <input type="text" name="Edad">
+    <label for="text">Tercer Parcial</label>
+    <input type="text" name="tercerParcial" >
   </p>
   
   <p>
-    <label for="text">Estado</label>
-    <input type="text" name="Estado">
+    <label for="text">idClase</label>
+    <input type="text" name="idClase">
   </p>
   <p>
-    <label for="text">idGrado</label>
-    <input type="text" name="idGrado">
+    <label for="text">idAlumno</label>
+    <input type="text" name="idAlumno">
+  </p>
+  <p>
+    <label for="text">idEmpleado</label>
+    <input type="text" name="idEmpleado">
   </p>
 
   
