@@ -27,12 +27,12 @@
                             <td><?php echo $f['primerParcial'];?></td>
                             <td><?php echo $f['segundoParcial'];?></td>
                             <td><?php echo $f['tercerParcial'];?></td>
-                            <td><?php echo $f['Promedio'];?></td>
+                            <td><?php echo round(($f['primerParcial']+$f['segundoParcial']+$f['tercerParcial'])/3,0);?></td>
                             <td><?php echo $f['idClase'];?></td>
                             <td><?php echo $f['idAlumno'];?></td>
                             <td><?php echo $f['idEmpleado'];?></td>
                             <td><a href="<?php echo base_url();?>notas/edit/<?php echo $f['idNotas']; ?>" class="btn btn-primary">Editar</a>
-                                <?php echo anchor('notas/delete','Eliminar','class="btn btn-danger"');?>
+                            <a href="<?php echo base_url();?>notas/delete/<?php echo $f['idNotas']; ?>" class="btn btn-danger">Eliminar</a>
                             </td>
                         </tr>  
                         <?php } ?>

@@ -40,7 +40,7 @@ class Notas extends CI_Controller {
         $primerParcial = $_POST["primerParcial"];
         $segundoParcial = $_POST["segundoParcial"];
         $tercerParcial = $_POST["tercerParcial"];
-        $Promedio = ($primerParcial+$segundoParcial+$tercerParcial)/3;
+        //$Promedio = $_POST["Promedio"];
         $idClase = $_POST["idClase"];
         $idAlumno = $_POST["idAlumno"];
         $idEmpleado = $_POST["idEmpleado"];
@@ -79,11 +79,11 @@ class Notas extends CI_Controller {
         $primerParcial=$this->db->escape((int)$_POST["primerParcial"]);
         $segundoParcial=$this->db->escape((int)$_POST["segundoParcial"]);
         $tercerParcial=$this->db->escape((int)$_POST["segundoParcial"]);
-        $Promedio=$this->db->escape((int)($primerParcial+$segundoParcial+$tercerParcial)/3);
+        //$Promedio=$this->db->escape((int)($primerParcial+$segundoParcial+$tercerParcial)/3);
         $idClase=$this->db->escape((int)$_POST["idClase"]);
         $idAlumno=$this->db->escape((int)$_POST["idAlumno"]);
         $idEmpleado=$this->db->escape((int)$_POST["idEmpleado"]);
-        if($this->notas_model->update($idNotas, $primerParcial, $segundoParcial, $tercerParcial, $Promedio, $idClase,$idAlumno, $idEmpleado)){
+        if($this->notas_model->update($idNotas, $primerParcial, $segundoParcial, $tercerParcial, $idClase,$idAlumno, $idEmpleado)){
           redirect(base_url("notas/show"));
         }
 
@@ -94,6 +94,14 @@ class Notas extends CI_Controller {
         $this->load->view('plantilla/footer');
         $this->load->view('plantilla/scripts');
         $this->load->view('plantilla/end');
+    }
+
+    public function delete(int $id){
+      $this->load->model('notas_model');
+        if($this->notas_model->delete($id)){
+          redirect(base_url("notas/show"));
+        }
+      
     }
 }
 

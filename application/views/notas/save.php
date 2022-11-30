@@ -1,3 +1,5 @@
+
+
 <h1 style= text-align:center>Ingresar notas</h1>
 <form action="<?php anchor("notas/save") ?>"  method ="POST" autocomplete="off">
   <div class="inset">
@@ -36,6 +38,7 @@
     <?php echo anchor('/inicio','Cancelar','class="btn btn-danger"');?>
  
   </div>
+
 
 
 </form>

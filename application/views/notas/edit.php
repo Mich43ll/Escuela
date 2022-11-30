@@ -21,6 +21,10 @@
             <label for="tercerParcial">tercerParcial</label>
             <input type="text" name="tercerParcial" value="<?php echo $nota->tercerParcial ?>">
         </p>
+        <p>
+            <label for="Promedio">Promedio</label>
+            <input type="text" name="Promedio" value="<?php echo $nota->Promedio ?>">
+        </p>
 
         <p>
             <label for="idClase">idClase</label>
