@@ -29,7 +29,7 @@
                             <td><?php echo $f['Telefono'];?></td>
                             <td><?php echo $f['Estado'];?></td>
                             <td><a href="<?php echo base_url();?>empleados/edit/<?php echo $f['idEmpleado']; ?>" class="btn btn-primary">Editar</a>
-                                <?php echo anchor('empleado/delete','Eliminar','class="btn btn-danger"');?>
+                            <a href="<?php echo base_url();?>empleados/delete/<?php echo $f['idEmpleado']; ?>" class="btn btn-danger">Eliminar</a>
                             </td>
                         </tr>  
                         <?php } ?>

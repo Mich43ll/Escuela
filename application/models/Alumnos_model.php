@@ -28,5 +28,9 @@ class Alumnos_model extends CI_Model {
 	{
 		return $this->db->query("UPDATE escuela.alumnos SET NombreCompleto = {$NombreCompleto}, Direccion = {$Direccion}, Genero = {$Genero}, Edad = {$Edad}, Estado = {$Estado}, idGrado = {$idGrado} WHERE idAlumno = {$idAlumno}");
 	}
+	public function delete($id)
+	{
+		return $this->db->query("DELETE FROM escuela.alumnos  WHERE idAlumno = {$id}");
+	}
 
 }

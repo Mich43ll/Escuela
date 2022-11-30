@@ -28,5 +28,9 @@ class Empleados_model extends CI_Model {
 	{
 		return $this->db->query("UPDATE escuela.empleados SET NombreCompleto = {$NombreCompleto}, idCargo = {$idCargo}, Direccion = {$Direccion}, Telefono = {$Telefono}, Estado = {$Estado} WHERE idEmpleado = {$idEmpleado}");
 	}
+	public function delete($id)
+	{
+		return $this->db->query("DELETE FROM escuela.empleados  WHERE idEmpleado = {$id}");
+	}
 
 }

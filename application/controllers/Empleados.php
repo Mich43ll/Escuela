@@ -91,6 +91,13 @@ class Empleados extends CI_Controller {
         $this->load->view('plantilla/scripts');
         $this->load->view('plantilla/end');
     }
+    public function delete(int $id){
+      $this->load->model('empleados_model');
+        if($this->empleados_model->delete($id)){
+          redirect(base_url("empleados/show"));
+        }
+      
+    }
 }
 
 
