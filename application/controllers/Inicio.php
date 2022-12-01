@@ -4,9 +4,9 @@
 class Inicio extends CI_Controller {
     
 
-    function _construct()
+    function __construct()
     {
-          parent::_construct();
+          parent::__construct();
           $this->load->helper('html');
           $this->load->helper('url');
 
