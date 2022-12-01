@@ -1,4 +1,4 @@
-<h1 style= text-align:center>Inicio de Sesion</h1>
+<h1 style= "margin-top:200px; text-align:center;">Inicio de Sesion</h1>
 <form action="<?php anchor("inicio/inicio") ?>"  method ="POST" autocomplete="off">
   <div class="inset">
 
