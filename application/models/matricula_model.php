@@ -26,7 +26,7 @@ class Matricula_model extends CI_Model {
 	}
 	public function update(int $idMatricula, int $IdAlumno, string $Jornada, int $idGrado)
 	{
-		return $this->db->query("UPDATE escuela.matriculas SET IdAlumno = {$IdAlumno}, Jornada = {$Jornada}, idGrado = {$idGrado} } WHERE idMatricula = {$idMatricula}");
+		return $this->db->query("UPDATE escuela.matriculas SET IdAlumno = {$IdAlumno}, Jornada = {$Jornada}, idGrado = {$idGrado} WHERE idMatricula = {$idMatricula}");
 	}
 	public function delete($id)
 	{
