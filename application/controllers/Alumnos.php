@@ -1,6 +1,6 @@
 <?php
   defined('BASEPATH') OR exit('No direct script access allowed');
-
+  use Dompdf\Dompdf;
 class Alumnos extends CI_Controller {
     
 
@@ -10,6 +10,7 @@ class Alumnos extends CI_Controller {
           $this->load->helper('form');
           $this->load->helper('html');
           $this->load->helper('url');
+          $this->load->model('alumnos_model');
 
     }
     
@@ -99,6 +100,22 @@ class Alumnos extends CI_Controller {
           redirect(base_url("alumnos/show"));
         }
       
+    }
+    public function imprimir(){
+      $this->load->model('alumnos_model');
+      $alumnos['titulo']='Alumnos';
+      $alumnos['lista']= $this->alumnos_model->show();
+      $this->load->view('alumnos/imprimir', $alumnos);
+    }
+    public function pdfalumnos(){
+      $this->load->model('alumnos_model');
+      $alumnos['titulo']='Alumnos';
+      $alumnos['lista']= $this->alumnos_model->show();
+      $dompdf = new Dompdf();
+      $dompdf->loadHtml('<h1>Pdf de Alumnos</h1>');
+      $dompdf->setPaper('A4', 'landscape');
+      $dompdf->render();
+      $dompdf->stream();
     }
 }
 
