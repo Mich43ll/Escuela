@@ -21,15 +21,14 @@
           </ul>
         </li>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Matriculas
-          </a>
-          <!---Lista de Matriculas Menu--> 
+         <!--Navegacion de Matriculas Lista-->
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Matricula</a>
           <ul class="dropdown-menu dropdown-menu-dark">
-          <li><a class="dropdown-item" href="">Matricula del Alumno</a></li>
-            <li><a class="dropdown-item" href="">Ingresar Nueva Matricula</a></li>
-          
+            <li>
+              <?php echo anchor('matricula/show','Listar matricula','class="dropdown-item"');?>
+              <?php echo anchor('matricula/save','Ingresar marticula','class="dropdown-item"');?>
+            </li>
           </ul>
         </li>
 
