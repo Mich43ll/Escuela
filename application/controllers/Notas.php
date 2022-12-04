@@ -141,7 +141,7 @@ class Notas extends CI_Controller
       $idNotas = $this->db->escape((int)$_POST["idNotas"]);
       $primerParcial = $this->db->escape((int)$_POST["primerParcial"]);
       $segundoParcial = $this->db->escape((int)$_POST["segundoParcial"]);
-      $tercerParcial = $this->db->escape((int)$_POST["segundoParcial"]);
+      $tercerParcial = $this->db->escape((int)$_POST["tercerParcial"]);
       //$Promedio=$this->db->escape((int)($primerParcial+$segundoParcial+$tercerParcial)/3);
       $idClase = $this->db->escape((int)$_POST["idClase"]);
       $idAlumno = $this->db->escape((int)$_POST["idAlumno"]);
