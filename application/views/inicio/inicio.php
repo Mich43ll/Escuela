@@ -1,1 +1,1 @@
-<div><?php echo "Pagina de inicio" ?></div>
+<h1>School Musical | La mejor opción en </h1>

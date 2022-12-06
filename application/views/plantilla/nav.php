@@ -67,6 +67,7 @@
           </ul>
         </li>
 
+        <a class="nav-link " href="<?=site_url('login/logout')?>" role="button"  aria-expanded="false">Cerrar Sesión</a>
           
           
 

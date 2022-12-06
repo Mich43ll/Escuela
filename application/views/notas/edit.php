@@ -4,7 +4,7 @@
 
         <p>
             <label >idNotas</label>
-            <input type="text" name="idNotas" disabled  value="<?php echo $nota->idNotas?>" >
+            <input type="text" name="idNotas" readonly  value="<?php echo $nota->idNotas?>" >
         </p>
 
         <p>
