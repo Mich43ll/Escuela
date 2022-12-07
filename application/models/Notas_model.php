@@ -34,5 +34,4 @@ class Notas_model extends CI_Model {
 		return $this->db->query("DELETE FROM escuela.controlnotas  WHERE idNotas = {$id}");
 	}
 
-
 }
