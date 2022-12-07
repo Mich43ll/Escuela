@@ -12,7 +12,7 @@ class matricula extends CI_Controller {
           $this->load->helper('url');
 
     }
-    
+
     public function inicio(){
       $this->load->view('plantilla/head');
       $this->load->view('plantilla/nav');
@@ -35,15 +35,50 @@ class matricula extends CI_Controller {
     }
     //Guardar los datos de la Matricula
     public function save(){
+      $this->load->helper(array('form', 'url'));
+      $this->load->library('form_validation');
       $this->load->model('matricula_model');
       if($this->input->post()){
         $IdAlumno =$_POST["IdAlumno"];
         $Jornada =$_POST["Jornada"];
         $idGrado =$_POST["idGrado"];
+      //Validaciones
+      $this->form_validation->set_rules(
+        'Jornada',
+        'JORNADA',
+        'required|alpha',
+        
+        array(
+          'required' => 'El campo %s no puede quedar vacio',
+          'alpha' => 'En el campo %s no se pueden escribir numeros ni caracteres especiales'
+        )
+      );
+      $this->form_validation->set_rules(
+        'IdAlumno',
+        'ID ALUMNO',
+        'required|numeric',
+        array(
+          'required' => 'El campo %s no puede quedar vacio',
+          'numeric' => 'En el %s solo se pueden esribir numeros'
+        
+        )
+      );
+      $this->form_validation->set_rules(
+        'idGrado',
+        'ID GRADO',
+        'required|numeric',
+        array(
+          'required' => 'El campo %s no puede quedar vacio',
+          'numeric' => 'En el %s solo se pueden esribir numeros'
+        )
+      );
+      //Fin de las validaciones
+      if ($this->form_validation->run() === false) {
+      } else {
         $this->matricula_model->save($_POST);
         redirect(base_url("matricula/show"));
-
       }
+    }  
         $this->load->view('plantilla/head');
         $this->load->view('plantilla/nav');
         $this->load->view('matricula/save');

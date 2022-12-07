@@ -1,20 +1,20 @@
 <h1 style= text-align:center>Ingresar Alumno Matriculado</h1>
 <form action="<?php anchor("matricula/save") ?>"  method ="POST" autocomplete="off">
   <div class="inset">
-
+  <div style="color:#a94442;background-color:#f2dede;border-color:#ebccd1; border-radius:5px"><?php echo validation_errors();?></div>
   <p>
     <label for="text">ID DEL ALUMNO</label>
-    <input type="text" name="IdAlumno" >
+    <input type="text" name="IdAlumno" required>
   </p>
 
   <p>
     <label for="text">JORNADA</label>
-    <input type="text" name="Jornada">
+    <input type="text" name="Jornada"required>
   </p>
 
   <p>
     <label for="text">ID DEL GRADO</label>
-    <input type="text" name="idGrado" >
+    <input type="text" name="idGrado"required>
   </p>
   
   <button type="submit" class="btn btn-primary">Guardar</button>
