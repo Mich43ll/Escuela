@@ -34,14 +34,5 @@ class Notas_model extends CI_Model {
 		return $this->db->query("DELETE FROM escuela.controlnotas  WHERE idNotas = {$id}");
 	}
 
-	public function showClase($filtros = FALSE)
-	{
-		if($filtros === FALSE){
-            $query = $this->db->get('escuela.clase');
-            return $query->result_array();
-        }
-        $query = $this->db->get_where('controlnotas', $filtros);
-        return $query->row_array();
-	}
 
 }

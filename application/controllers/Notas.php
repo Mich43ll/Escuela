@@ -39,7 +39,6 @@ class Notas extends CI_Controller
   public function save()
   {
     $this->load->model('notas_model');
-    $data['lista']= $this->notas_model->showClase();
     $this->load->helper(array('form', 'url'));
     $this->load->library('form_validation');
     
