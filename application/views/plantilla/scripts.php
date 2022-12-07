@@ -3,7 +3,20 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 
-<script src="js/jquery.min.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/main.js"></script>
+<script src="/public/src/js/jquery.min.js"></script>
+  <script src="/public/src/js/popper.js"></script>
+  <script src="/public/src/js/bootstrap.min.js"></script>
+  <script src="/public/src/js/main.js"></script>
+   <!-- ALL JS FILES -->
+   <script src="/public/src/js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="/public/src/js/custom.js"></script>
+	<script src="/public/src/js/timeline.min.js"></script>
+	<script>
+		timeline(document.querySelectorAll('.timeline'), {
+			forceVerticalMode: 700,
+			mode: 'horizontal',
+			verticalStartPosition: 'left',
+			visibleItems: 4
+		});
+	</script>

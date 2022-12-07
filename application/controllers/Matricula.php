@@ -95,6 +95,12 @@ class matricula extends CI_Controller {
           redirect(base_url("matricula/show"));
         }
   }
+  public function imprimir(){
+    $this->load->model('matricula_model');
+    $matricula['titulo']='Notas de los Alumnos';
+    $matricula['lista']= $this->matricula_model->show();
+    $this->load->view('matricula/imprimir', $matricula);
+  }
 
 }   
 ?>

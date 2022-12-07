@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
           <ul class="navbar-nav">
           <?php echo anchor('/inicio','Inicio','class="nav-link"');?>
-        </li>
+
 
         <!--Navegacion de Alumnos Lista-->
         <li class="nav-item dropdown">
