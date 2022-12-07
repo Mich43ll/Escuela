@@ -1,22 +1,21 @@
-<div>
-	<div>
-	    <div>
-            <?php echo '<h2 class="heading-section" style= text-align:center>';echo $titulo;'</h2>'; ?>
-        </div>
-        <div style= text-align:center>
-                <?php echo  anchor('matricula/imprimir','imprimir','class="btn btn-danger"');?>
-        </div>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriculas</title>
+</head>
+<body>
     <div>
-		<div>
-			<div>
-                <table>
+    <table>
                     <thead>
                         <tr>
                             <th scope="col">ID</th>
                             <th scope="col">ID Alumno</th>
                             <th scope="col">Jornada</th>
                             <th scope="col">ID Grado</th>
+                            <th scope="col">Opciones</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -26,16 +25,12 @@
                             <td><?php echo $f['IdAlumno'];?></td>
                             <td><?php echo $f['Jornada'];?></td>
                             <td><?php echo $f['idGrado'];?></td>
-                            <td><a href="<?php echo base_url();?>matricula/edit/<?php echo $f['idMatricula']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="<?php echo base_url();?>matricula/delete/<?php echo $f['idMatricula']; ?>" class="btn btn-danger">Eliminar</a>
-                            </td>
                         </tr>  
                         <?php } ?>
                     </tbody>
                 </table>
-            </div>
-        </div>
     </div>
-</div>
 
-
+    <script>window.addEventListener("load", window.print());</script>
+</body>
+</html>
