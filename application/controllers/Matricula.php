@@ -50,7 +50,7 @@ class matricula extends CI_Controller {
         
         array(
           'required' => 'El campo %s no puede quedar vacio',
-          'alpha' => 'no se pueden escribir numeros ni caracteres especiales :3'
+          'alpha' => 'En el campo %s no se pueden escribir numeros ni caracteres especiales'
         )
       );
       $this->form_validation->set_rules(
