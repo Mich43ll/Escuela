@@ -24,6 +24,7 @@ class Empleados_model extends CI_Model {
         $query = $this->db->get_where('empleados', $filtros);
         return $query->row_array();
 	}
+	
 	public function save(array $datos)
 	{
 		return $this->db->insert("escuela.empleados", $datos);
