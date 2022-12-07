@@ -19,7 +19,7 @@
   
   <button type="submit" class="btn btn-primary">Guardar</button>
   
-    <?php echo anchor('/inicio','Cancelar','class="btn btn-danger"');?>
+    <?php echo anchor('matricula/show','Cancelar','class="btn btn-danger"');?>
  
   </div>
 

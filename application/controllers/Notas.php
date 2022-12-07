@@ -38,9 +38,10 @@ class Notas extends CI_Controller
   //Guardar los datos de los alumnos
   public function save()
   {
+    $this->load->model('notas_model');
     $this->load->helper(array('form', 'url'));
     $this->load->library('form_validation');
-    $this->load->model('notas_model');
+    
     if ($this->input->post()) {
       $primerParcial = $_POST["primerParcial"];
       $segundoParcial = $_POST["segundoParcial"];
@@ -164,5 +165,18 @@ class Notas extends CI_Controller
     if ($this->notas_model->delete($id)) {
       redirect(base_url("notas/show"));
     }
+  }
+
+
+
+
+
+
+  //Imprimir las Notas de los Alumnos
+  public function imprimir(){
+    $this->load->model('notas_model');
+    $alumnos['titulo']='Notas de los Alumnos';
+    $alumnos['lista']= $this->notas_model->show();
+    $this->load->view('notas/imprimir', $alumnos);
   }
 }

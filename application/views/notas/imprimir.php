@@ -1,17 +1,14 @@
-<div>
-	<div>
-	    <div>
-            <?php echo '<h2 class="heading-section" style= text-align:center>';echo $titulo;'</h2>'; ?>
-        </div>
-        <div style= text-align:center>
-                <?php echo  anchor('notas/imprimir','imprimir','class="btn btn-danger"');?>
-                <?php echo anchor('notas/pdfalumnos','PDF','class="btn btn-danger"');?>
-        </div>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas de los Alumnos</title>
+</head>
+<body>
     <div>
-		<div>
-			<div>
-                <table>
+    <table>
                     <thead>
                         <tr>
                             <th scope="col">ID</th>
@@ -35,16 +32,13 @@
                             <td><?php echo $f['idClase'];?></td>
                             <td><?php echo $f['idAlumno'];?></td>
                             <td><?php echo $f['idEmpleado'];?></td>
-                            <td><a href="<?php echo base_url();?>notas/edit/<?php echo $f['idNotas']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="<?php echo base_url();?>notas/delete/<?php echo $f['idNotas']; ?>" class="btn btn-danger">Eliminar</a>
                             </td>
                         </tr>  
                         <?php } ?>
                     </tbody>
                 </table>
-            </div>
-        </div>
     </div>
-</div>
 
-
+    <script>window.addEventListener("load", window.print());</script>
+</body>
+</html>
