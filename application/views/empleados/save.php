@@ -10,6 +10,9 @@
   <p>
     <label for="text">idCargo</label>
     <input type="text" name="idCargo" required>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+     Lista de Cargos
+    </button>
   </p>
 
   <p>
@@ -35,3 +38,39 @@
 
 
 </form>
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">idCargo</th>
+                            <th scope="col">Cargo</th>
+                            <th scope="col">Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach($lista as $f){ ?>
+                        <tr>
+                            <td><?php echo $f['idCargo'];?></td>
+                            <td><?php echo $f['Cargo'];?></td>
+                            <td><?php echo $f['Estado'];?></td>
+                            </td>
+                        </tr>  
+                        <?php } ?>
+                    </tbody>
+                </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

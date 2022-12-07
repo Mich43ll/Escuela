@@ -46,6 +46,8 @@ class Empleados extends CI_Controller {
 
     //Guardar los datos de los empleados
     public function save(){
+      $this->load->model('empleados_model');
+      $data['lista']= $this->empleados_model->showcargos();
       $this->load->library('form_validation');
       $this->load->model('empleados_model');
       if($this->input->post()){
@@ -114,7 +116,7 @@ class Empleados extends CI_Controller {
       }
         $this->load->view('plantilla/head');
         $this->load->view('plantilla/nav');
-        $this->load->view('empleados/save');
+        $this->load->view('empleados/save', $data);
         $this->load->view('plantilla/footer');
         $this->load->view('plantilla/scripts');
         $this->load->view('plantilla/end');
