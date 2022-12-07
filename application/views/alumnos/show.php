@@ -5,7 +5,6 @@
         </div>
         <div style= text-align:center>
                 <?php echo  anchor('alumnos/imprimir','imprimir','class="btn btn-danger"');?>
-                <?php echo anchor('alumnos/pdfalumnos','PDF','class="btn btn-danger"');?>
         </div>
     </div>
     

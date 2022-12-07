@@ -15,15 +15,6 @@ class Empleados_model extends CI_Model {
         $query = $this->db->get_where('empleados', $filtros);
         return $query->row_array();
 	}
-	public function showcargos($filtros = FALSE)
-	{
-		if($filtros === FALSE){
-            $query = $this->db->get('escuela.cargo');
-            return $query->result_array();
-        }
-        $query = $this->db->get_where('empleados', $filtros);
-        return $query->row_array();
-	}
 	
 	public function save(array $datos)
 	{

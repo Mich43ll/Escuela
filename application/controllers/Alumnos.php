@@ -211,22 +211,6 @@ class Alumnos extends CI_Controller {
       $alumnos['lista']= $this->alumnos_model->show();
       $this->load->view('alumnos/imprimir', $alumnos);
     }
-
-
-
-
-
-    //pdf los datos de los alumnos
-    public function pdfalumnos(){
-      $this->load->model('alumnos_model');
-      $alumnos['titulo']='Alumnos';
-      $alumnos['lista']= $this->alumnos_model->show();
-      $dompdf = new Dompdf();
-      $dompdf->loadHtml('<h1>Pdf de Alumnos</h1>');
-      $dompdf->setPaper('A4', 'landscape');
-      $dompdf->render();
-      $dompdf->stream();
-    }
 }
 
 

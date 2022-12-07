@@ -47,9 +47,8 @@ class Empleados extends CI_Controller {
     //Guardar los datos de los empleados
     public function save(){
       $this->load->model('empleados_model');
-      $data['lista']= $this->empleados_model->showcargos();
       $this->load->library('form_validation');
-      $this->load->model('empleados_model');
+      $this->load->helper(array('form', 'url'));
       if($this->input->post()){
         $NombreCompleto = $_POST["NombreCompleto"];
         $idCargo = $_POST["idCargo"];
@@ -69,42 +68,41 @@ class Empleados extends CI_Controller {
         );
         $this->form_validation->set_rules(
           'idCargo',
-          'idCargo',
-          'required|numeric|trim|max_length[1]|trim',
+          'ID Cargo',
+          'required|numeric|trim',
           array(
             'required' => 'El campo %s no puede quedar vacio',
-            'numeric' => 'En el campo %s solo se pueden esribir numeros',
-            'max_length' => 'El campo %s solo permite 2 digitos'
+            'numeric' => 'En el campo %s solo se pueden esribir numeros'
           )
         );
         $this->form_validation->set_rules(
           'Direccion',
           'Direccion',
-          'required|max_length[200]|regex_match[/^[a-z ,]*$/i]|trim',
+          'required|regex_match[/^[a-zñ A-ZÑ ]*$/i]|max_length[100]|trim',
           array(
             'required' => 'El campo %s no puede quedar vacio',
             'regex_match' => 'En el campo %s solo se pueden esribir letras',
-            'max_length' => 'El campo %s no puede tener mas de 200 '
+            'max_length' => 'El campo %s no puede tener mas de 100 digitos'
           )
         );
         $this->form_validation->set_rules(
           'Telefono',
           'Telefono',
-          'required|max_length[8]|regex_match[0-9]|trim',
+          'required|numeric|min_length[8]|trim',
           array(
             'required' => 'El campo %s no puede quedar vacio',
             'regex_match' => 'En el campo %s solo se pueden esribir numeros',
-            'max_length' => 'El campo %s no puede tener mas de 200 '
+            'min_length' => 'El campo %s debe tener minimo 8 digitos'
           )
         );
         $this->form_validation->set_rules(
           'Estado',
           'Estado',
-          'required|numeric|trim|max_length[1]|trim',
+          'required|numeric|less_than_equal_to[1]',
           array(
             'required' => 'El campo %s no puede quedar vacio',
-            'numeric' => 'En el campo %s solo se pueden esribir numeros',
-            'max_length' => 'El campo %s solo permite 2 digitos'
+            'numeric' => 'En el %s solo se pueden esribir numeros',
+            'less_than_equal_to' => 'En el campo %s escriba 1 para Activo o 0 para Inactivo'
           )
         );
         //Fin de las validaciones
@@ -116,7 +114,7 @@ class Empleados extends CI_Controller {
       }
         $this->load->view('plantilla/head');
         $this->load->view('plantilla/nav');
-        $this->load->view('empleados/save', $data);
+        $this->load->view('empleados/save');
         $this->load->view('plantilla/footer');
         $this->load->view('plantilla/scripts');
         $this->load->view('plantilla/end');
