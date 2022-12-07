@@ -88,7 +88,7 @@ class Empleados extends CI_Controller {
         $this->form_validation->set_rules(
           'Telefono',
           'Telefono',
-          'required|numeric|min_length[8]|trim',
+          'required|numeric|min_length[8]|max_length[8]|trim',
           array(
             'required' => 'El campo %s no puede quedar vacio',
             'regex_match' => 'En el campo %s solo se pueden esribir numeros',

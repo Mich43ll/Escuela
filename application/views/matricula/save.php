@@ -3,17 +3,17 @@
   <div class="inset">
   <div style="color:#a94442;background-color:#f2dede;border-color:#ebccd1; border-radius:5px"><?php echo validation_errors();?></div>
   <p>
-    <label for="text">ID DEL ALUMNO</label>
+    <label for="text">Id Alumno</label>
     <input type="text" name="IdAlumno" required>
   </p>
 
   <p>
-    <label for="text">JORNADA</label>
+    <label for="text">Jornada</label>
     <input type="text" name="Jornada"required>
   </p>
 
   <p>
-    <label for="text">ID DEL GRADO</label>
+    <label for="text">Id del Grado</label>
     <input type="text" name="idGrado"required>
   </p>
   

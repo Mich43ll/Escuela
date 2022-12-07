@@ -53,31 +53,31 @@ class Notas extends CI_Controller
       $this->form_validation->set_rules(
         'primerParcial',
         'Primer Parcial',
-        'required|numeric|less_than[100]',
+        'required|numeric|less_than_equal_to[100]',
         array(
           'required' => 'El campo %s no puede quedar vacio',
           'numeric' => 'En el %s solo se pueden esribir numeros',
-          'less_than' => 'El alumno no puede tener mas de 100 puntos en el %s'
+          'less_than_equal_to' => 'El alumno no puede tener mas de 100 puntos en el %s'
         )
       );
       $this->form_validation->set_rules(
         'segundoParcial',
         'Segundo Parcial',
-        'required|numeric|less_than[100]',
+        'required|numeric|less_than_equal_to[100]',
         array(
           'required' => 'El campo %s no puede quedar vacio',
           'numeric' => 'En el %s solo se pueden esribir numeros',
-          'less_than' => 'El alumno no puede tener mas de 100 puntos en el %s'
+          'less_than_equal_to' => 'El alumno no puede tener mas de 100 puntos en el %s'
         )
       );
       $this->form_validation->set_rules(
         'tercerParcial',
         'tercer Parcial',
-        'required|numeric|less_than[100]',
+        'required|numeric|less_than_equal_to[100]',
         array(
           'required' => 'El campo %s no puede quedar vacio',
           'numeric' => 'En el %s solo se pueden esribir numeros',
-          'less_than' => 'El alumno no puede tener mas de 100 puntos en el %s'
+          'less_than_equal_to' => 'El alumno no puede tener mas de 100 puntos en el %s'
         )
       );
       $this->form_validation->set_rules(
