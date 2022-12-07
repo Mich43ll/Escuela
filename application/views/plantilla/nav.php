@@ -48,11 +48,9 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Clases</a>
           <ul class="dropdown-menu dropdown-menu-dark">
-          <li>
-            <a class="dropdown-item" href="">Lista de Clases</a>
-          </li>
             <li>
-              <a class="dropdown-item" href="">Ingresar Clases</a>
+              <?php echo anchor('clases/show','Listar clases','class="dropdown-item"');?>
+              <?php echo anchor('clases/save','Ingresar Clase','class="dropdown-item"');?>
             </li>
           </ul>
         </li>
