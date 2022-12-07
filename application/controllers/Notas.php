@@ -165,4 +165,17 @@ class Notas extends CI_Controller
       redirect(base_url("notas/show"));
     }
   }
+
+
+
+
+
+
+  //Imprimir las Notas de los Alumnos
+  public function imprimir(){
+    $this->load->model('notas_model');
+    $alumnos['titulo']='Notas de los Alumnos';
+    $alumnos['lista']= $this->notas_model->show();
+    $this->load->view('notas/imprimir', $alumnos);
+  }
 }

@@ -3,9 +3,12 @@
 	    <div>
             <?php echo '<h2 class="heading-section" style= text-align:center>';echo $titulo;'</h2>'; ?>
         </div>
+        <div style= text-align:center>
+                <?php echo  anchor('alumnos/imprimir','imprimir','class="btn btn-danger"');?>
+                <?php echo anchor('alumnos/pdfalumnos','PDF','class="btn btn-danger"');?>
+        </div>
     </div>
-    <div>
-		<div>
+    
 			<div>
                 <table>
                     <thead>
@@ -38,8 +41,8 @@
                     </tbody>
                 </table>
             </div>
-        </div>
-    </div>
+            <div>
+            </div>
 </div>
 
 
