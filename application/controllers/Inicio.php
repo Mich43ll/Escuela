@@ -14,7 +14,6 @@ class Inicio extends CI_Controller {
     
     public function index()
     {
-      $this->load->view('plantilla/head');
       $this->load->view('plantilla/nav');
       $this->load->view('inicio/inicio');
       $this->load->view('plantilla/footer');

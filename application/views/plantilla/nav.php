@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
           <ul class="navbar-nav">
           <?php echo anchor('/inicio','Inicio','class="nav-link"');?>
-        </li>
+
 
         <!--Navegacion de Alumnos Lista-->
         <li class="nav-item dropdown">
@@ -45,15 +45,15 @@
         </li>
         
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Clases</a>
-          <ul class="dropdown-menu dropdown-menu-dark">
-          <li>
-            <a class="dropdown-item" href="">Lista de Clases</a>
-          </li>
-            <li>
-              <a class="dropdown-item" href="">Ingresar Clases</a>
-            </li>
-          </ul>
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Clases</a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li>
+                <a class="dropdown-item" href="">Lista de Clases</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="">Ingresar Clases</a>
+              </li>
+            </ul>
         </li>
 
 

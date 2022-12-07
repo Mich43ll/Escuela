@@ -38,6 +38,7 @@ form:after {
   left:20%;
   background:linear-gradient(left, #111, #444, #b6b6b8, #444, #111);
   top:0;
+  margin-bottom: 100px;
 }
 
 form:before {
@@ -50,6 +51,7 @@ form:before {
   left:34%;
   top:-7px;
   box-shadow: 0 0 6px 4px #fff;
+  margin-bottom: 100px;
 }
 
 .inset {
